@@ -10,8 +10,10 @@ export ADD_HOOKS="self-updater.bg.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=/usr/share/icons/hicolor/256x256/apps/github-desktop.png
 export DESKTOP=/usr/share/applications/github-desktop.desktop
-export DEPLOY_OPENGL=1
-export DEPLOY_VULKAN=1
+export STARTUPWMCLASS=
+export ALWAYS_SOFTWARE=1
+#export DEPLOY_OPENGL=1
+#export DEPLOY_VULKAN=1
 
 # Deploy dependencies
 quick-sharun /usr/bin/github-desktop
@@ -23,4 +25,4 @@ quick-sharun --make-appimage
 
 # Test the app for 12 seconds, if the test fails due to the app
 # having issues running in the CI use --simple-test instead
-quick-sharun --test ./dist/*.AppImage
+quick-sharun --simple-test ./dist/*.AppImage
