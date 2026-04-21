@@ -23,7 +23,7 @@ case "$ARCH" in # they use AMD64 and ARM64 for the deb links
 	x86_64)  deb_arch=amd64;;
 	aarch64) deb_arch=arm64;;
 esac
-DEB_LINK=$(wget https://api.github.com/repos/shiftkey/desktop/releases/latest -O - \
+DEB_LINK=$(wget https://api.github.com/repos/shiftkey/desktop/releases/latest -O - | \
 grep "browser_download_url" | \
     grep "$deb_arch.deb" | \
     head -n 1 | \
