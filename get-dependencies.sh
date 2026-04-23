@@ -32,8 +32,8 @@ fi
 
 mkdir -p ./AppDir/bin
 ar xvf /tmp/app.deb
-tar -xvf ./data.tar.xz
-rm -f ./*.xz
+tar -xvf ./data.tar.zst
+rm -f ./*.zst
 rm -rf ./usr/share/doc
 mv -v ./usr/lib/github-desktop-plus/* ./AppDir/bin
 cp ./usr/share/icons/hicolor/256x256/apps/github-desktop-plus.png ./AppDir/.DirIcon
