@@ -8,8 +8,7 @@ echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
 	gnome-keyring  \
-	libcurl-gnutls \
-	libsecret
+	libcurl-gnutls
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
