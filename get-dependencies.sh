@@ -7,7 +7,8 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
-	gnome-keyring \
+	gnome-keyring  \
+	libcurl-gnutls \
 	libsecret
 
 echo "Installing debloated packages..."
